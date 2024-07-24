@@ -1,0 +1,173 @@
+[
+    {
+        "type": "function",
+        "function": {
+            "name": "completed_task",
+            "description": "Signal the completion of a task.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "response": {
+                        "type": "string",
+                        "description": "The response to send to the caller including the result of the task."
+                    }
+                },
+                "required": [
+                    "response"
+                ]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "update_facts",
+            "description": "Updates the facts.json file with new facts about Niklas.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "Wohnort": {
+                        "type": "string",
+                        "description": "The place where Niklas lives."
+                    },
+                    "Geburtstag": {
+                        "type": "string",
+                        "description": "Niklas' date of birth."
+                    },
+                    "Alter": {
+                        "type": "integer",
+                        "description": "Niklas' age."
+                    },
+                    "other_facts": {
+                        "type": "object",
+                        "description": "Other facts about Niklas."
+                    }
+                },
+                "required": [
+                    "Wohnort",
+                    "Geburtstag",
+                    "Alter"
+                ]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "update_status",
+            "description": "Updates the status.txt file with the current status of Niklas.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "description": "The current status of Niklas."
+                    }
+                },
+                "required": [
+                    "status"
+                ]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "add_diary_entry",
+            "description": "Adds a new entry to the diary.json file.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "datum": {
+                        "type": "string",
+                        "description": "The date of the diary entry."
+                    },
+                    "uhrzeit": {
+                        "type": "string",
+                        "description": "The time of the diary entry."
+                    },
+                    "inhalt": {
+                        "type": "string",
+                        "description": "The content of the diary entry."
+                    },
+                    "kommentar": {
+                        "type": "string",
+                        "description": "A comment about the diary entry."
+                    }
+                },
+                "required": [
+                    "datum",
+                    "uhrzeit",
+                    "inhalt"
+                ]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "add_calendar_event",
+            "description": "Adds a new event to the calendar.json file.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "datum": {
+                        "type": "string",
+                        "description": "The date of the event."
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the event."
+                    },
+                    "uhrzeit": {
+                        "type": "string",
+                        "description": "The time of the event."
+                    },
+                    "ort": {
+                        "type": "string",
+                        "description": "The location of the event."
+                    },
+                    "kontext": {
+                        "type": "string",
+                        "description": "The context of the event."
+                    }
+                },
+                "required": [
+                    "datum",
+                    "name"
+                ]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "update_todos",
+            "description": "Updates the todos.json file with new to-do tasks for Niklas.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "beschreibung": {
+                        "type": "string",
+                        "description": "The description of the to-do task."
+                    },
+                    "genaue_beschreibung": {
+                        "type": "string",
+                        "description": "A more detailed description of the to-do task."
+                    },
+                    "deadline": {
+                        "type": "string",
+                        "description": "The deadline of the to-do task."
+                    },
+                    "completed": {
+                        "type": "boolean",
+                        "description": "The completion status of the to-do task."
+                    }
+                },
+                "required": [
+                    "beschreibung"
+                ]
+            }
+        }
+    }
+]

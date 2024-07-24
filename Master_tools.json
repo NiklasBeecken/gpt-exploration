@@ -1,0 +1,26 @@
+[
+    {
+        "type": "function",
+        "function": {
+            "name": "call_expert",
+            "description": "Calls an expert to perform a task. You can call the FileManager for any file operations or the TestManager for any test operations.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "task": {
+                        "type": "string",
+                        "description": "The specific task to perform, e.g. 'Create a folder at /path/to/folder'"
+                    },
+                    "expert": {
+                        "type": "string",
+                        "description": "The specific expert to call, e.g. 'FileManager'"
+                    }
+                },
+                "required": [
+                    "task",
+                    "expert"
+                ]
+            }
+        }
+    }
+]
