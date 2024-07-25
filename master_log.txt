@@ -6,3 +6,32 @@
 2024-07-24 12:27:16 - Master: Hallo Niklas! Wie kann ich dir helfen?
 2024-07-24 12:27:22 - User: Ich treffe mich Morgen mit Nora
 2024-07-24 12:27:28 - Master: Ich habe das Treffen mit Nora für morgen in deinem Kalender gespeichert und eine Vorbereitung in deiner To-Do-Liste erstellt. Gibt es noch etwas, bei dem ich helfen kann?
+2024-07-25 10:54:46 - User: Hey
+2024-07-25 10:54:47 - Master: Hallo Niklas! Wie kann ich dir helfen?
+2024-07-25 10:55:40 - User: Wann hab ich Shows?
+2024-07-25 10:55:57 - Master: Du hast eine Comedy-Show am **27. September** geplant. Zudem gibt es folgende Informationen:
+
+- **ComedyShows.json**: Enthält die Termine für die Auftritte.
+- **todos.json**: Beinhaltet Aufgaben zum Schreiben neuer Witze für die Comedy-Show.
+- **calendar.json**: Die Comedy-Show ist für den **27. September um 20:00 Uhr** eingeplant.
+
+Möchtest du mehr Details zu einem der Punkte?
+2024-07-25 11:00:23 - User: Hey na
+2024-07-25 11:00:24 - Master: Hallo Niklas! Wie kann ich dir helfen?
+2024-07-25 11:00:58 - User: Ich treffe mich Morgen mit Gina
+2024-07-25 11:01:15 - Master: Ich habe das Treffen mit Gina für morgen in deinem Kalender gespeichert und eine Vorbereitung in deiner To-Do-Liste erstellt. Gibt es noch etwas, bei dem ich helfen kann?
+2024-07-25 11:01:48 - User: Was für Events hab ich geplant?
+2024-07-25 11:01:51 - Master: Du hast folgende Events geplant:
+
+1. **Meeting mit Nora**: 
+   - Datum: 26. September 2023
+
+2. **Comedy-Show**: 
+   - Datum: 27. September 2023
+   - Uhrzeit: 20:00
+   - Ort: Comedy Club Berlin
+   - Kontext: Niklas präsentiert neue Witze.
+
+Möchtest du mehr Informationen zu einem dieser Events?
+2024-07-25 11:04:24 - User: Was bist du?
+2024-07-25 11:04:26 - Master: Ich bin dein virtueller Assistent, der dir hilft, Informationen zu organisieren, Termine zu verwalten und Aufgaben zu erledigen. Ich kann auf verschiedene Experten zugreifen, um deine Anfragen zu bearbeiten. Wie kann ich dir heute helfen?

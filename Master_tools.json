@@ -3,17 +3,17 @@
         "type": "function",
         "function": {
             "name": "call_expert",
-            "description": "Calls an expert to perform a task. You can call the FileManager for any file operations or the TestManager for any test operations.",
+            "description": "Nutzt einen Experten, um eine Aufgabe zu erledigen.",
             "parameters": {
                 "type": "object",
                 "properties": {
                     "task": {
                         "type": "string",
-                        "description": "The specific task to perform, e.g. 'Create a folder at /path/to/folder'"
+                        "description": "Die spezifische Aufgabe, die erledigt werden soll, z.B. 'Erstelle einen Ordner '/path/to/folder'"
                     },
                     "expert": {
                         "type": "string",
-                        "description": "The specific expert to call, e.g. 'FileManager'"
+                        "description": "Der Experte, der genutzt werden soll, z.B 'FileManager'"
                     }
                 },
                 "required": [
