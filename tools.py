@@ -154,18 +154,38 @@ class LifeManager:
     @staticmethod
     def add_calendar_event(event):
         path = LifeManager._get_file_path("calendar.json")
+        #try:
+        if os.path.exists(path):
+            with open(path, 'r') as file:
+                calendar = json.load(file)
+        else:
+            calendar = []
+        calendar.append(event)
+        with open(path, 'w') as file:
+            json.dump(calendar, file, indent=4)
+        return True
+        #except Exception as e:
+        #    print(f"Error adding calendar event: {e}")
+        #    return False
+        
+    @staticmethod
+    def remove_calendar_event(rm_event):
+        path = LifeManager._get_file_path("calendar.json")
         try:
             if os.path.exists(path):
                 with open(path, 'r') as file:
                     calendar = json.load(file)
             else:
-                calendar = []
-            calendar.append(event)
+                print("Calendar file does not exist.")
+                return False
+            
+            updated_calendar = [event for event in calendar if not (event.get('datum') == rm_event["date"] and event.get('name') == rm_event["name"])]
+            
             with open(path, 'w') as file:
-                json.dump(calendar, file, indent=4)
+                json.dump(updated_calendar, file, indent=4)
             return True
         except Exception as e:
-            print(f"Error adding calendar event: {e}")
+            print(f"Error removing calendar event: {e}")
             return False
 
     @staticmethod
@@ -184,3 +204,31 @@ class LifeManager:
         except Exception as e:
             print(f"Error updating todos: {e}")
             return False
+    @staticmethod
+    def read_file(args):
+        
+        file_key = args.get("file_key")
+
+        file_map = {
+            "facts": "facts.json",
+            "status": "status.txt",
+            "diary": "diary.json",
+            "calendar": "calendar.json",
+            "todos": "todos.json"
+        }
+        if file_key in file_map:
+            path = LifeManager._get_file_path(file_map[file_key])
+            try:
+                if (os.path.exists(path)):
+                    with open(path, 'r') as file:
+                        content = file.read()
+                    return content
+                else:
+                    print(f"File for {file_key} does not exist.")
+                    return None
+            except Exception as e:
+                print(f"Error reading file for {file_key}: {e}")
+                return None
+        else:
+            print(f"Invalid file key: {file_key}")
+            return None

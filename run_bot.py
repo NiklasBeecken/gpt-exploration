@@ -16,6 +16,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     # This function will print any text message sent to the bot
     message_text = update.message.text
     print("User: " + message_text)
+
     response = assistant.answer(message_text)
     await update.message.reply_text(response)
 
